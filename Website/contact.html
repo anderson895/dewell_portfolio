@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body>
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Me</h2>
+            <p>Know more about me</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class='bx bx-envelope'></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>dewellhelsen02@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i class='bx bx-phone'></i></div>
+                    <div class="text">
+                        <h3>Phone No.</h3>
+                        <p>09958873487</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contactForm">
+                <div id="thank-you-message" style="display: none;">Thank you for your message!</div>
+                <form action="https://formspree.io/dewellhelsen02@gmail.com" method="POST">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="fullname" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="email" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="message" required="required"></textarea>
+                        <span>Type your message here</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+</body>
+</html>
+

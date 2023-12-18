@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(27, 25, 25);
+}
+
+
+.about {
+    width: 100%;
+    padding: 78px 0px;
+}
+
+.about img {
+    height: 460px;
+    width: 420px;
+    border-radius: 20px;
+}
+
+.about-text {
+    width: 550px;
+}
+
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-text h2 {
+    color: white;
+    font-size: 70px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-text h5 {
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+span {
+    color: rgb(105, 105, 104);
+}
+
+.about-text p {
+    color: rgb(237, 234, 234);
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin: 2rem 0 3rem;
+    margin-bottom: 45px;
+}
+
+ .container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 10%;
+    margin-bottom: 10px;
+}
+
+.container .main-title {
+
+    max-width: 700px;
+    margin-bottom: 100px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.container .main-title h1 {
+    position: relative;
+    font-size: 40px;
+    color: #d1c7cc;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.container .main-title h1::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 125%;
+    left: 0;
+    background-color: #fff;
+}
+
+.container .main-title h1::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #157c7e;
+    top: calc(125% - 1px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-title p {
+    color: #fff;
+}
+
+.container .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.row .col {
+    flex-basis: 46%;
+}
+
+.row .sub-title h2 {
+    position: relative;
+    color: #fff;
+    font-size: 22px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.row .sub-title h2::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    top: 125%;
+    left: 0;
+    background-color: #808080;
+}
+
+.row .sub-title h2::after {
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 3px;
+    top: calc(125% - 1px);
+    left: 0;
+    background-color: #157c7e;
+}
+
+.subject {
+    font-size: 18px;
+    font-weight: thin;
+    color: #fff;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: #808080;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.progress-bar::after {
+    position: absolute;
+    content: attr(value);
+    top: -35px;
+    right: 0;
+    color:  #157c7e;
+    font-size: 18px;
+}
+
+.progress-line {
+    position: absolute;
+    width: 0%;
+    height: 7px;
+    background-color: #0e5d5e;
+    border-radius: 15px;
+    top: -1px;
+    animation: animate 1.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+@keyframes animate {
+    100%{
+        width: 100%;
+    }
+}
+
+.progress-line::after {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #157c7e;
+}
+
+@media(max-width: 768px) {
+    .container {
+        padding: 30px 8%;
+    }
+}
+
+@media(max-width: 568px) {
+    .container .row {
+        flex-direction: column;
+    }
+    .container .main-title h1 {
+        font-size: 36px;
+    }
+    .container .row {
+        margin-top: 30px;
+    }  
+    .row .col :nth-child(2) {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 768px)  {
+    .about {
+        width: 100%;
+        padding:0px;
+    }
+   .main{
+    display: flex;
+    flex-direction: column-reverse;
+   }
+   .about-text {
+    width: 100%;
+    margin-top: 180px;
+}
+}
